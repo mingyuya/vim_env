@@ -53,6 +53,9 @@ autocmd Bufwritepre,filewritepre *.v,*.vh,*.sv,*.svh execute "normal ma"
 autocmd Bufwritepre,filewritepre *.v,*.vh,*.sv,*.svh exe "1," . 6 ."g/Last modified  :.*/s//Last modified  : " .strftime("%c")
 autocmd Bufwritepre,filewritepre *.v,*.vh,*.sv,*.svh execute "normal `a"
 
+" insert 1st line to new c-shell file
+autocmd bufnewfile *.ch so ~/.vim/custom_header/cshell.txt
+
 " Move to the instantiation
 map <F12> ? u_?
 ^<CR>
